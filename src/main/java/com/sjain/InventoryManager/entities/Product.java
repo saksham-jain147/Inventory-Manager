@@ -1,20 +1,21 @@
 package com.sjain.InventoryManager.entities;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Product {
 
-////    'product_details' Table Structure :
-//    product_id INTEGER AUTO_INCREMENT,
-//    name VARCHAR(100),
-//    description TEXT,
-//    price DECIMAL(10,2),
-//    quantity_in_stock INTEGER,
-//    PRIMARY KEY(product_id)
-
+    @Id
     private int id;
     private String name;
     private String description;
     private double price;
     private int quantity;
+
+    public Product(){
+
+    }
 
     public Product(int id, String name, String description, double price, int quantity) {
         this.id = id;
